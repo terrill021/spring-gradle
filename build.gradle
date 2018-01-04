@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+// repository for look external dependecies
+repositories {
+    mavenCentral()
+}
+// java version code
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// External dependecies
+dependencies {
+	// depenencies for compile time
+    compile "joda-time:joda-time:2.2"
+    // Dependencies for test time	
+    testCompile "junit:junit:4.12"
+}
+
+// jar file name
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+// main calass name
+mainClassName = 'com.ceiba.practice.spring.gradle.App'
